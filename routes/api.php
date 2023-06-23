@@ -29,6 +29,8 @@ Route::put('/blog-update',[BlogController::class,'updateBlog']);
 
 Route::delete('/delete-blog/{id}',[BlogController::class,'deleteBlog']);
 
+Route::get('/search-data/{param}',[BlogController::class,'searchBlogByName']);
+
 
 /*notes
 --1

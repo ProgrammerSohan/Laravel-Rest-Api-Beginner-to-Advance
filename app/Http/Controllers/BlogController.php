@@ -60,6 +60,13 @@ class BlogController extends Controller
 
      }
 
+     public function searchBlogByName($param)
+     {
+        $blog = Blog::where('title', 'like', "%" .$param. "%")->get();
+        return $blog;
+
+     }
+
 
 
 }
