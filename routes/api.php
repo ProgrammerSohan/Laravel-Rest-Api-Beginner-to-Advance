@@ -21,7 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('first-api', [TestAPIController::class, 'firstAPI']);
-Route::get('/get-blog', [BlogController::class, 'getBlog']);
+Route::get('/get-blog/{id}', [BlogController::class, 'getBlog']);
 
 
 /*notes

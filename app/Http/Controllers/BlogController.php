@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
-     public function getBlog()
+     public function getBlog($id)
      {
-        $blog = Blog::all();
+        $blog = Blog::find($id);
         return $blog;
 
      }
