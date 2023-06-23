@@ -71,7 +71,7 @@ class BlogController extends Controller
      public function validateData(Request $request)
      {
         $rules = array(
-            'title'=>"required",
+            'title'=>"required|min:6|max:10",
             'details'=>"required"
 
         );
