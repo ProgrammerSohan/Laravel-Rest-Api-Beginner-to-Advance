@@ -25,6 +25,8 @@ Route::get('/get-blog/{id?}', [BlogController::class, 'getBlog']);
 
 Route::post('/add-blog', [BlogController::class, 'addBlog']);
 
+Route::put('/blog-update',[BlogController::class,'updateBlog']);
+
 
 /*notes
 --1

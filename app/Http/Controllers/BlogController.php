@@ -34,4 +34,18 @@ class BlogController extends Controller
 
      }
 
+     public function updateBlog(Request $request)
+     {
+        $blog = Blog::find($request->id);
+        $blog->title = $request->title;
+        $blog->details = $request->details;
+        $result = $blog->save();
+        if($result){
+            return ["result"=>"Blog Updated"];
+        }else {
+            return ["result"=>"Blog Not Updated"];
+        }
+
+     }
+
 }
