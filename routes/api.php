@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TestAPIController;
 
 /*
@@ -20,6 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('first-api', [TestAPIController::class, 'firstAPI']);
+Route::get('/get-blog', [BlogController::class, 'getBlog']);
 
 
 /*notes
