@@ -20,3 +20,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('first-api', [TestAPIController::class, 'firstAPI']);
+
+
+/*notes
+--1
+-http://localhost:8000/api/first-api
+
+-2
+
+
+*/
