@@ -31,6 +31,8 @@ Route::delete('/delete-blog/{id}',[BlogController::class,'deleteBlog']);
 
 Route::get('/search-data/{param}',[BlogController::class,'searchBlogByName']);
 
+Route::post('/save-valid-blog',[BlogController::class,'validateData']);
+
 
 /*notes
 --1
