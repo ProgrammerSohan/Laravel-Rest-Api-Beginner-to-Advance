@@ -80,7 +80,16 @@ class BlogController extends Controller
         if($validator->fails()){
             return $validator->errors();
         }else{
-            return ["result"=>"Valid Request"];
+           // return ["result"=>"Valid Request"];
+           $blog = new Blog;
+           $blog->title = $request->title;
+           $blog->details = $request->details;
+           $result = $blog->save();
+           if($result){
+             return ["result"=>"Blog Added"];
+           }else{
+            return ["result"=>"Blog Not Added"];
+           }
         }
 
      }
