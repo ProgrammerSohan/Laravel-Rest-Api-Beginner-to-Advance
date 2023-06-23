@@ -7,9 +7,15 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
-     public function getBlog($id)
+     public function getBlog($id=null)
      {
-        $blog = Blog::find($id);
+
+        if($id){
+            $blog = Blog::find($id);
+        }else {
+            $blog = Blog::all();
+        }
+
         return $blog;
 
      }
