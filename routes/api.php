@@ -23,6 +23,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('first-api', [TestAPIController::class, 'firstAPI']);
 Route::get('/get-blog/{id?}', [BlogController::class, 'getBlog']);
 
+Route::post('/add-blog', [BlogController::class, 'addBlog']);
+
 
 /*notes
 --1

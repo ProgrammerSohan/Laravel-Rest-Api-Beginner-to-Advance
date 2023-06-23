@@ -19,4 +19,19 @@ class BlogController extends Controller
         return $blog;
 
      }
+
+     public function addBlog(Request $request)
+     {
+        $blog = new Blog;
+        $blog->title = $request->title;
+        $blog->details = $request->details;
+        $result =$blog->save();
+        if($result){
+            return ["result" => "Blog saved"];
+        }else {
+            return ["result" => "Blog not saved"];
+        }
+
+     }
+
 }
