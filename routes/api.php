@@ -27,6 +27,8 @@ Route::post('/add-blog', [BlogController::class, 'addBlog']);
 
 Route::put('/blog-update',[BlogController::class,'updateBlog']);
 
+Route::delete('/delete-blog/{id}',[BlogController::class,'deleteBlog']);
+
 
 /*notes
 --1

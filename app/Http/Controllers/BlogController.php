@@ -48,4 +48,18 @@ class BlogController extends Controller
 
      }
 
+     public function deleteBlog($id)
+     {
+        $blog = Blog::find($id);
+        $result = $blog->delete();
+        if($result){
+            return ["result"=>"Blog Deleted"];
+        }else {
+            return ["result"=>"Blog Not Deleted"];
+        }
+
+     }
+
+
+
 }
